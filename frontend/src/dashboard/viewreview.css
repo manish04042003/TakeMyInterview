@@ -1,0 +1,75 @@
+/*--------------------------------------- CSs for FAqs Sections  */
+.faqs {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+  
+  .accordion {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .accordion-item {
+    margin-bottom: 20px;
+  }
+  
+  .accordion-button {
+    background-color: #f7f9ff;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 20px 20px 0px 0px;
+    padding: 1.4rem 20px;
+  }
+  
+  .accordion-button:hover {
+    background-color: #eff1fa;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #ffffff;
+    box-shadow: 0px 10px 30px rgba(190, 190, 190, 0.25);
+    border-radius: 0px 0px 20px 20px;
+    font-size: 1.2rem;
+    line-height: 28px;
+  
+    /* padding: 2rem 20px; */
+  }
+  
+  .accordion-content p {
+    margin: 2rem 20px;
+  }
+  
+  .accordion-item.active .accordion-button {
+    background-color: #eff1fa;
+  }
+  
+  .accordion-item.active .accordion-content {
+    max-height: fit-content;
+    /* height: fit-content; */
+  }
+  
+  .accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .accordion-item.active .arrow {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transform: rotate(180deg);
+  }
+  .arrow {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  }
+  .faqs > h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }

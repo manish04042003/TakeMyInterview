@@ -36,7 +36,19 @@ const createInterview = async (req, res) => {
     let { userid } = req.data;
     let interview_id = new Date().getTime();
     let questionAndResponseSet = await giverandomQuestion();
-    let startTime = new Date().getTime();
+    let currtime = new Date();
+    let options = {
+        timeZone: 'Asia/Kolkata',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true
+    };
+
+    startTime = new Intl.DateTimeFormat('en-IN', options).format(currtime);
     console.log(questionAndResponseSet);
     let currInterview = new Interview({ interview_id, userid, questionAndResponseSet, startTime });
     await currInterview.save().then(() => {
@@ -77,7 +89,7 @@ const submitresponse = async (req, res) => {
             response_id,
             userid,
             question_id,
-            question ,
+            question,
             interview_id,
             score,
             review,
@@ -152,7 +164,7 @@ const getAllInterview = async (req, res) => {
 
 const getinterview = async (req, res) => {
     let interview_id = req.params.interview_id;
-    await Response.find({interview_id}).then((data) => {
+    await Response.find({ interview_id }).then((data) => {
         res.status(200).json({
             message: "success",
             data: data
@@ -187,11 +199,11 @@ const checkeligibility = async (req, res) => {
         let user = await User.findOne({ userid });
         let timePeriod = 7 * 24 * 60 * 60 * 1000; // seven day
         if (user.isSubscribed) {
-            timePeriod = timePeriod/7; // one day
+            timePeriod = timePeriod / 7; // one day
         }
 
         const now = new Date().getTime();
-        const lastValidTime = now - timePeriod ;
+        const lastValidTime = now - timePeriod;
 
         if (!user.lastMockInterview || user.lastMockInterview < lastValidTime) {
             res.status(200).json({
@@ -204,16 +216,16 @@ const checkeligibility = async (req, res) => {
                 eligibility: false
             })
         }
-    } catch(e) {
+    } catch (e) {
         res.status(500).json({
             message: "error",
-            error : e
+            error: e
         })
     }
 
 }
 
-const getquestion = async(req,res)=>{
+const getquestion = async (req, res) => {
     const question_id = req.params.question_id;
     const ObjectId = mongoose.Types.ObjectId;
     await Question.findOne({ _id: new ObjectId(`${question_id}`) }).then((data) => {
@@ -230,4 +242,4 @@ const getquestion = async(req,res)=>{
 }
 
 
-module.exports = { createInterview, uploadQuestion, submitresponse, getAllInterview, getinterview, getresponse, checkeligibility,getquestion };
+module.exports = { createInterview, uploadQuestion, submitresponse, getAllInterview, getinterview, getresponse, checkeligibility, getquestion };

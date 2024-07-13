@@ -47,6 +47,7 @@ function InnerContent({obj}) {
     <>
       <p> <b>Your Response</b> : {obj.textResponse} </p>
       <p> <b>Your Score</b> : {obj.score} </p>
+      <p> <b>Best Answer</b> : {obj.bestAnswer} </p>
       <big><p> <b>Reviews</b></p></big>
       <p> <b>Mistake</b> :{obj.review[0].mistake} </p>
       <p> <b>Solution</b> :{obj.review[0].solution} </p>

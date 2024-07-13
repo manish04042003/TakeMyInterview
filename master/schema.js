@@ -99,7 +99,7 @@ const interviewSchema = new mongoose.Schema({
         require: true
     },
     startTime: {
-        type : Date,
+        type : String,
         require : true,
     },
     score : {

@@ -9,8 +9,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 
 
 
-const SpeechRecognition =
-    window.SpeechRecognition || window.webkitSpeechRecognition;
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const mic = new SpeechRecognition();
 
 mic.continuous = true;
@@ -138,7 +137,7 @@ function QuestionBox({ interview_id, question_id }) {
     }
 
     return <>
-        <h1>Current ring Interview {interview_id} this is Questionbox</h1>
+        {/* <h1>Current ring Interview {interview_id} this is Questionbox</h1> */}
         {
             currQuestion ? (
                 <div>

@@ -9,16 +9,19 @@ const ViewReview = () => {
   return (
     <div>
       <div className="faqs maxWidth" id="faqsection">
-        <h1>Interview ID: {interviewid}</h1>
+        {/* <h1>Interview ID: {interviewid}</h1> */}
         <div className="accordion">
           {
-            allResponse ?
+             (allResponse==null || allResponse.length == 0) ?(
+              <h1 style={{textAlign : "center"}}>No Response Recorded</h1>
+             ):
               allResponse.map(e => {
                 return (
-                  <div key={e.response_id} className="accordion-item" onClick={(e) => {
-                    e.currentTarget.classList.toggle("active");
-                  }} >
-                    <div className="accordion-button">
+                  <div key={e.response_id} className="accordion-item" >
+                    <div className="accordion-button" onClick={(e) => {
+                      // e.target.parentElement
+                    console.log(e.target.parentElement.lastChild.classList.toggle('active'));
+                  }}>
                       <p>{e.question}</p>
                       <span className="material-symbols-outlined arrow">
                         expand_more
@@ -29,7 +32,7 @@ const ViewReview = () => {
                     </div>
                   </div>
                 )
-              }) : "Loding..."
+              })
           }
         </div>
       </div>

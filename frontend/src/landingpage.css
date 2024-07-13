@@ -1,0 +1,50 @@
+.landingcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 140px;
+    max-width: 1120px;
+    text-align: center;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+.landingcontent > div h1{
+    font-size: 2.3rem;
+}
+.landingcontent > div p{
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.imagediv {
+    width: 85%;
+    height: fit-content;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.imagediv img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+
+/* login and signup css */
+
+
+.loginandsignup{
+    width: 350px; /* Adjust the form width as needed */
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.loginandsignup h1{
+    text-align: center;
+}

@@ -52,11 +52,13 @@
     background-color: #eff1fa;
   }
   
-  .accordion-item.active .accordion-content {
+  /* .accordion-item.active .accordion-content {
     max-height: fit-content;
-    /* height: fit-content; */
-  }
+  } */
   
+  .active{
+    max-height: fit-content;
+  }
   .accordion-button {
     display: flex;
     justify-content: space-between;

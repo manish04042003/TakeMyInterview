@@ -9,6 +9,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body{
+  background-color: #f7f8fa;
+}
+
 
 
 
@@ -123,9 +127,46 @@
 
 
 
+.nointerviewcontainer{
+  max-width: 750px;
+  padding: 1rem;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.nointerviewcontainer p{
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
 
 
 
+
+.logo{
+  text-decoration: none;
+
+}
+
+.logo h1{
+  font-size: 1.5rem !important;
+}
+
+
+.landingpagecontent{
+  height: calc(100vh -  80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.landingpagecontent div{
+
+}
 
 
 
@@ -138,25 +179,8 @@
   justify-content: center;
   align-items: center;
 }
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Adjust this value to center the form vertically */
-}
 
-form {
-  width: 300px; /* Adjust the form width as needed */
-  padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-h1 {
-  margin-bottom: 20px;
-  text-align: center;
-}
 
 p {
   margin-bottom: 5px;
@@ -189,13 +213,205 @@ button[type="submit"]:hover {
 }
 
 
+.thankyoupagediv{
+    text-align: center;
+    max-width: 1000px;
+    padding: 1rem;
+    margin: auto;
+}
 
 
+
+/* CSS */
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    rgb(0, 103, 238),
+    rgb(0, 103, 238) 8%,
+    rgb(0, 103, 238) 92%,
+    rgb(0, 103, 238) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: rgb(0, 103, 238);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+
+/* 15 */
+.custom-btn {
+  width: fit-content;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.custom-btn a{
+  text-decoration: none;
+  color: white;
+}
+.btn-15 {
+  background: #b621fe;
+  border: none;
+  z-index: 1;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #663dff;
+  border-radius: 5px;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+}
+.btn-15:hover {
+  color: #fff;
+}
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-15:active {
+  top: 2px;
+}
 
 .link-container {
   display: flex;
-  justify-content: space-around; /* Adjust as needed */
+  justify-content: space-between; /* Adjust as needed */
   align-items: center; /* Adjust as needed */
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background-color: white;
+
+  position: sticky;
+  top: 0;
+
+  /* height: 80px; */
+}
+
+.landingnav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  height: 80px;
+}
+.landingnav >div{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .dashboard-link {
@@ -264,6 +480,18 @@ button[type="submit"]:hover {
 }
 
 
+.navbarbackbtn{
+  cursor: pointer;
+}
+.startnewinterview{
+  color: white;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: blue;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 400;
+}
 
 
 /* loader css */
@@ -374,7 +602,7 @@ svg rect{
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 500px;
+  height: calc(100vh - 80px);
 }
 .questionbox {
   border-radius: 20px;
@@ -443,3 +671,6 @@ svg rect{
   cursor: pointer;
   font-size: 15px;
 }
+
+
+

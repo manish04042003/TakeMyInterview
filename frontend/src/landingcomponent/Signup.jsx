@@ -54,8 +54,9 @@ function Signup() {
 
 
     return <>
-        <center>
+        <div className="loginandsignup">
             <form onSubmit={handleSignup} >
+                <h1>Sign Up</h1>
                 <p>Name :</p>
                 <input value={name} type="text" required onChange={(e)=>{
                     setName(e.target.value)
@@ -72,7 +73,8 @@ function Signup() {
                 <br />
                 <button type="submit">Sign Up</button>
             </form>
-        </center>
+        </div>
+       
 
     </>
 }

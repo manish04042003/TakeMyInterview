@@ -3,9 +3,10 @@ import {
   RecoilRoot
 } from 'recoil';
 
+
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Maincontent from "./landingcomponent/Maincontent"
-import Aboutus from "./landingcomponent/Aboutus"
 import Signup from "./landingcomponent/Signup";
 import Login from "./landingcomponent/Login";
 import ForgetChangePassword from  "./landingcomponent/ForgetChangePassword";
@@ -26,7 +27,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />}>
             <Route index element={<Maincontent />} />
-            <Route path="aboutus" element={<Aboutus />} />
             <Route path="signup" element={<Signup />} />
             <Route path="login" element={<Login />} />
             <Route path="forget" element={<ForgetChangePassword />} />

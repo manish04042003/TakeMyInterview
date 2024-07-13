@@ -12,9 +12,8 @@ function Dashboard(){
     if(loding){
         return "loding...."
     }
-
     if(isLoggedIn==false){
-        console.log("redice;bsdfbsbd")
+        // console.log("redice;bsdfbsbd")
         navigate("/login")
     }
     return <>

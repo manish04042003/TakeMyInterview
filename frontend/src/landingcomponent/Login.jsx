@@ -52,7 +52,7 @@ function Login() {
   }
 
   return <>
-    <div className="center">
+    <div className="loginandsignup">
       <form onSubmit={login}>
         <h1>Login</h1>
         <p>Email</p>

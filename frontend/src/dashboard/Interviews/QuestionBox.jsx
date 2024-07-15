@@ -34,7 +34,7 @@ function QuestionBox({ interview_id, question_id }) {
 
     const submitans =async ()=>{
         if(note==null){
-            alert("Please Ansewer this Question if You Dont Know the ans then also you have to tell that...");
+            alert("Please answer the question first to proceed further");
             return;
         }
         setLoaderFlagOnSubmit(true);
